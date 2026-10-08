@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Poraj Law</title>
+<meta name="description" content="Poraj Law. International business law with practical solutions: organisational structure, international agreements, legal due diligence, cross-border investments and M&A, particularly between Europe and Asia.">
+<meta property="og:title" content="Poraj Law">
+<meta property="og:description" content="Poraj Law. International business law with practical solutions: organisational structure, international agreements, legal due diligence, cross-border investments and M&A, particularly between Europe and Asia.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://porajlaw.com/">
+<meta name="theme-color" content="#16302B">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://porajlaw.com/">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: a dark bottle-green opening statement, then clause-numbered sections (§) on a pale sage ground; one measured column of text with a narrow margin column for labels. The mark is the Poraj rose: five white petals, gold seed, green sepals. */
+:root{
+  --green:#16302B; --green-deep:#0F2420; --green-tint:#1F3F38;
+  --ground:#EDEFEA; --panel:#F6F7F4; --ink:#141A18; --muted:#5E6A66;
+  --line:#D5D9D3; --line-strong:#BDC4BD; --brass:#B08D57; --brass-soft:#D9C9A8;
+  --leaf:#5B9E66; --seed:#D6AE5A;
+  --on-dark:#F2F3EE; --on-dark-soft:rgba(242,243,238,.72); --on-dark-faint:rgba(242,243,238,.5); --on-dark-line:rgba(242,243,238,.18);
+  --display:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --body:Manrope,"Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --green:#132926; --green-deep:#0C1A18; --green-tint:#1B3530;
+    --ground:#0F1614; --panel:#17201D; --ink:#E9ECE7; --muted:#9BA69F;
+    --line:#26312D; --line-strong:#36453F; --brass:#C2A06A; --brass-soft:#8C7448;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --green:#132926; --green-deep:#0C1A18; --green-tint:#1B3530;
+  --ground:#0F1614; --panel:#17201D; --ink:#E9ECE7; --muted:#9BA69F;
+  --line:#26312D; --line-strong:#36453F; --brass:#C2A06A; --brass-soft:#8C7448;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-weight:400;font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.shell{max-width:1080px;margin:0 auto;padding-inline:24px}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.defs{position:absolute;width:0;height:0;overflow:hidden}
+
+/* header + hero share the dark ground */
+.top{background:var(--green);color:var(--on-dark)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:22px;flex-wrap:wrap}
+.wordmark{display:inline-flex;align-items:center;gap:13px;font-family:var(--display);font-size:20px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--on-dark);white-space:nowrap}
+.rose{width:34px;height:34px;flex:none;--rose-line:var(--green)}
+nav.main{display:flex;gap:16px 28px;flex-wrap:wrap;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;min-width:0}
+nav.main a{color:var(--on-dark-soft);text-decoration:none;padding-block:4px;border-bottom:1px solid transparent}
+nav.main a:hover{color:var(--on-dark);border-bottom-color:var(--brass)}
+
+.hero .shell{padding-block:64px 88px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:end}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,5.2vw,58px);line-height:1.08;letter-spacing:-.01em;margin:0;max-width:16ch;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--brass-soft)}
+.hero .stand{margin:28px 0 0;max-width:52ch;font-size:clamp(16.5px,1.8vw,18px);line-height:1.65;color:var(--on-dark-soft);font-weight:300}
+.brief{border-top:1px solid var(--on-dark-line);padding-top:18px;display:grid;gap:14px;font-size:14px;margin:0}
+.brief div{display:grid;grid-template-columns:110px 1fr;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--on-dark-line)}
+.brief dt{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--on-dark-faint);font-weight:500;padding-top:3px}
+.brief dd{margin:0;color:var(--on-dark)}
+@media (max-width:820px){
+  .hero .shell{grid-template-columns:1fr;padding-block:44px 60px;gap:36px}
+  .brief div{grid-template-columns:96px 1fr}
+}
+
+/* clause sections */
+section{padding-block:80px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.clause{display:grid;grid-template-columns:150px minmax(0,1fr);gap:40px}
+.mark{font-family:var(--display);font-size:15px;color:var(--brass);letter-spacing:.08em;padding-top:10px}
+.mark span{display:block;font-family:var(--body);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:500}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,38px);line-height:1.15;margin:0 0 18px;letter-spacing:-.005em;max-width:24ch;text-wrap:balance}
+.lede{font-size:18px;line-height:1.6;max-width:60ch;margin:0;font-weight:300}
+@media (max-width:820px){
+  section{padding-block:56px}
+  .clause{grid-template-columns:1fr;gap:16px}
+  .mark{padding-top:0}
+}
+
+/* practice areas */
+.areas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid var(--line-strong)}
+.areas > div{padding:28px 28px 32px 0;min-width:0}
+.areas > div + div{padding-left:28px;border-left:1px solid var(--line)}
+.areas h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0 0 12px;letter-spacing:-.005em}
+.areas p{margin:0 0 16px;font-size:15px;color:var(--muted);line-height:1.55}
+.areas ul{margin:0;padding:0;list-style:none;font-size:14.5px}
+.areas li{padding:8px 0;border-top:1px solid var(--line)}
+@media (max-width:820px){
+  .areas{grid-template-columns:1fr}
+  .areas > div{padding:24px 0}
+  .areas > div + div{padding-left:0;border-left:0;border-top:1px solid var(--line-strong)}
+}
+
+/* approach */
+.ways{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:40px}
+.ways h3{font-family:var(--display);font-weight:400;font-size:21px;margin:0 0 10px}
+.ways p{margin:0;font-size:15px;color:var(--muted);line-height:1.55}
+.ways > div{padding-top:18px;border-top:1px solid var(--line-strong);min-width:0}
+@media (max-width:820px){ .ways{grid-template-columns:1fr;gap:24px} }
+
+/* contact */
+.contact{background:var(--green);color:var(--on-dark);border-bottom:0}
+.contact .mark{color:var(--brass-soft)}
+.contact .mark span{color:var(--on-dark-faint)}
+.contact h2{color:var(--on-dark)}
+.contact .lede{color:var(--on-dark-soft)}
+.contact .note{margin:34px 0 0;padding:18px 22px;border:1px solid var(--on-dark-line);display:inline-block;font-size:14.5px;color:var(--on-dark)}
+.contact .note b{font-weight:600}
+
+footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12.5px}
+.frow{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:24px}
+.frow .wordmark{font-size:14px;gap:10px}
+.frow .rose{width:24px;height:24px;--rose-line:var(--green-deep)}
+.frow p{margin:0;max-width:62ch}
+</style>
+
+<!-- The Poraj rose, drawn once and reused. Five petals with a cleft tip, a gold seed, green sepals showing between the petals. -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="rose" viewBox="-52 -52 104 104">
+    <g fill="var(--leaf)">
+      <path d="M0,-20 C-8,-28 -9,-40 0,-50 C9,-40 8,-28 0,-20 Z" transform="rotate(36)"/>
+      <path d="M0,-20 C-8,-28 -9,-40 0,-50 C9,-40 8,-28 0,-20 Z" transform="rotate(108)"/>
+      <path d="M0,-20 C-8,-28 -9,-40 0,-50 C9,-40 8,-28 0,-20 Z" transform="rotate(180)"/>
+      <path d="M0,-20 C-8,-28 -9,-40 0,-50 C9,-40 8,-28 0,-20 Z" transform="rotate(252)"/>
+      <path d="M0,-20 C-8,-28 -9,-40 0,-50 C9,-40 8,-28 0,-20 Z" transform="rotate(324)"/>
+    </g>
+    <g fill="var(--on-dark)" stroke="var(--rose-line)" stroke-width="1.6" stroke-linejoin="round">
+      <path d="M0,-7 C-8,-8 -17,-15 -19,-26 C-21,-37 -16,-46 -8,-44 Q-3,-43 0,-39 Q3,-43 8,-44 C16,-46 21,-37 19,-26 C17,-15 8,-8 0,-7 Z"/>
+      <path d="M0,-7 C-8,-8 -17,-15 -19,-26 C-21,-37 -16,-46 -8,-44 Q-3,-43 0,-39 Q3,-43 8,-44 C16,-46 21,-37 19,-26 C17,-15 8,-8 0,-7 Z" transform="rotate(72)"/>
+      <path d="M0,-7 C-8,-8 -17,-15 -19,-26 C-21,-37 -16,-46 -8,-44 Q-3,-43 0,-39 Q3,-43 8,-44 C16,-46 21,-37 19,-26 C17,-15 8,-8 0,-7 Z" transform="rotate(144)"/>
+      <path d="M0,-7 C-8,-8 -17,-15 -19,-26 C-21,-37 -16,-46 -8,-44 Q-3,-43 0,-39 Q3,-43 8,-44 C16,-46 21,-37 19,-26 C17,-15 8,-8 0,-7 Z" transform="rotate(216)"/>
+      <path d="M0,-7 C-8,-8 -17,-15 -19,-26 C-21,-37 -16,-46 -8,-44 Q-3,-43 0,-39 Q3,-43 8,-44 C16,-46 21,-37 19,-26 C17,-15 8,-8 0,-7 Z" transform="rotate(288)"/>
+    </g>
+    <circle r="11" fill="var(--seed)" stroke="var(--rose-line)" stroke-width="1.4"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="shell bar">
+    <a class="wordmark" href="#top"><svg class="rose" aria-hidden="true"><use href="#rose"/></svg>Poraj Law</a>
+    <nav class="main" aria-label="Sections">
+      <a href="#practice">Practice</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero top" id="top">
+  <div class="shell">
+    <div>
+      <h1>International business law, <em>with practical solutions.</em></h1>
+      <p class="stand">Independent counsel for companies and investors that operate across borders. Organisational structure, international agreements, legal due diligence and the full legal side of cross-border M&amp;A and investments, with advice written to be put into practice.</p>
+    </div>
+    <dl class="brief">
+      <div><dt>Practice</dt><dd>International organisational structure, contracts and international agreements, legal due diligence, cross-border investments and M&amp;A</dd></div>
+      <div><dt>Regions</dt><dd>Cross-border expertise, particularly between Europe and Asia</dd></div>
+      <div><dt>Languages</dt><dd>English, Swedish, Polish</dd></div>
+      <div><dt>Form</dt><dd>One lawyer, engaged directly, with local counsel where local law requires it</dd></div>
+    </dl>
+  </div>
+</div>
+
+<section id="practice">
+  <div class="shell clause">
+    <div class="mark">§ 1<span>Practice</span></div>
+    <div>
+      <h2>Structure, agreements and transactions, all of them cross-border.</h2>
+      <p class="lede">The practice covers the legal side of running a business in more than one country: how the group is structured, the agreements it enters into, and the transactions and investments that change it. Much of the work is unique cases that span several jurisdictions at once, where there is no template to follow and the solution has to be built.</p>
+      <div class="areas">
+        <div>
+          <h3>Organisational structure</h3>
+          <p>Designing and reorganising groups that span jurisdictions.</p>
+          <ul>
+            <li>Holding and group structures across jurisdictions</li>
+            <li>Reorganisations, including moving a group under a new parent company</li>
+            <li>Ownership structures for companies and high-value assets</li>
+            <li>Shareholder arrangements, share classes and governance</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contracts and international agreements</h3>
+          <p>Drafting and negotiating agreements between parties in different countries.</p>
+          <ul>
+            <li>Developing practical deal structures</li>
+            <li>Shareholder, investment and joint venture agreements</li>
+            <li>Distribution, agency and licensing agreements</li>
+            <li>Service, consultancy and framework agreements</li>
+            <li>Governing law, jurisdiction and dispute resolution</li>
+          </ul>
+        </div>
+        <div>
+          <h3>M&amp;A, due diligence and investments</h3>
+          <p>All legal aspects of international M&amp;A and cross-border investment.</p>
+          <ul>
+            <li>Term sheets and letters of intent</li>
+            <li>Legal due diligence, buy side and sell side</li>
+            <li>Share and asset purchase agreements</li>
+            <li>Warranties, indemnities, earn-outs and closing</li>
+            <li>Cross-border investments and investor documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="shell clause">
+    <div class="mark">§ 2<span>Approach</span></div>
+    <div>
+      <h2>Direct, commercial and clearly priced.</h2>
+      <div class="ways">
+        <div>
+          <h3>One lawyer, directly</h3>
+          <p>You deal with the lawyer doing the work, from the first call to the signed document. Nothing is handed down.</p>
+        </div>
+        <div>
+          <h3>Scope and fee up front</h3>
+          <p>Every matter starts with an agreed scope and an agreed fee basis, fixed where the work allows it. No surprises on the invoice.</p>
+        </div>
+        <div>
+          <h3>Advice you can act on</h3>
+          <p>Short documents, plain language, a recommendation rather than a list of options. Where local law needs a local lawyer, one is brought in and coordinated.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="shell clause">
+    <div class="mark">§ 3<span>Contact</span></div>
+    <div>
+      <h2>Tell us what you are working on.</h2>
+      <p class="lede">A first conversation is free of charge and settles whether the practice is the right fit for the matter.</p>
+      <p class="note"><b>Contact details will be published here shortly.</b></p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="shell frow">
+    <span class="wordmark"><svg class="rose" aria-hidden="true"><use href="#rose"/></svg>Poraj Law</span>
+    <p>© 2026 Poraj Law. This website is a general presentation of the practice and does not constitute legal advice.</p>
+  </div>
+</footer>
+</body>
+</html>
