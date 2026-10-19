@@ -114,8 +114,25 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,3.4vw,38px);l
 .contact .mark span{color:var(--on-dark-faint)}
 .contact h2{color:var(--on-dark)}
 .contact .lede{color:var(--on-dark-soft)}
-.contact .note{margin:34px 0 0;padding:18px 22px;border:1px solid var(--on-dark-line);display:inline-block;font-size:14.5px;color:var(--on-dark)}
-.contact .note b{font-weight:600}
+.cform{margin-top:36px;max-width:640px;display:grid;gap:22px}
+.cform .f{display:grid;gap:8px;min-width:0}
+.cform .f2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cform label{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--on-dark-faint)}
+.cform input[type=text],.cform input[type=email],.cform textarea{width:100%;background:rgba(242,243,238,.06);color:var(--on-dark);
+  border:1px solid rgba(242,243,238,.28);border-radius:2px;padding:13px 14px;font:inherit;font-size:16px;font-weight:300}
+.cform input::placeholder,.cform textarea::placeholder{color:rgba(242,243,238,.38)}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--brass-soft);background:rgba(242,243,238,.09)}
+.cform textarea{resize:vertical;min-height:150px}
+.cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.f-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.cform button{font-family:var(--body);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;
+  background:var(--on-dark);color:var(--green);border:0;border-radius:2px;padding:14px 26px;cursor:pointer}
+.cform button:hover{background:var(--brass-soft)}
+.cform button:focus-visible{outline:2px solid var(--brass-soft);outline-offset:3px}
+.cform button[disabled]{opacity:.6;cursor:default}
+.f-note{margin:0;font-size:14px;color:var(--on-dark-soft)}
+.f-note.err{color:#F2B8B3}
+@media (max-width:560px){ .cform .f2{grid-template-columns:1fr} }
 
 footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12.5px}
 .frow{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-block:24px}
@@ -160,13 +177,12 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
   <div class="shell">
     <div>
       <h1>International business law, <em>with practical solutions.</em></h1>
-      <p class="stand">Independent counsel for companies and investors that operate across borders. Organisational structure, international agreements, legal due diligence and the full legal side of cross-border M&amp;A and investments, with advice written to be put into practice.</p>
+      <p class="stand">Independent counsel for companies and investors that operate across borders. Organisational structure, international agreements, legal due diligence, the full legal side of cross-border M&amp;A and investments, as well as other complex legal issues. Our advice is tailored for each client and built around the preferred outcome and practical implementability.</p>
     </div>
     <dl class="brief">
-      <div><dt>Practice</dt><dd>International organisational structure, contracts and international agreements, legal due diligence, cross-border investments and M&amp;A</dd></div>
+      <div><dt>Practice</dt><dd>Organisational structure, agreements, cross-border partnerships and M&amp;A, investments, incentive structures, legal due diligence and other complex legal issues</dd></div>
       <div><dt>Regions</dt><dd>Cross-border expertise, particularly between Europe and Asia</dd></div>
-      <div><dt>Languages</dt><dd>English, Swedish, Polish</dd></div>
-      <div><dt>Form</dt><dd>One lawyer, engaged directly, with local counsel where local law requires it</dd></div>
+      <div><dt>Approach</dt><dd>Tailored legal advice focused on results and problem solving</dd></div>
     </dl>
   </div>
 </div>
@@ -175,8 +191,8 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
   <div class="shell clause">
     <div class="mark">§ 1<span>Practice</span></div>
     <div>
-      <h2>Structure, agreements and transactions, all of them cross-border.</h2>
-      <p class="lede">The practice covers the legal side of running a business in more than one country: how the group is structured, the agreements it enters into, and the transactions and investments that change it. Much of the work is unique cases that span several jurisdictions at once, where there is no template to follow and the solution has to be built.</p>
+      <h2>Advice and solutions for complex cases.</h2>
+      <p class="lede">The practice covers the legal side of cross-border business: how a group or deal is structured, the agreements it enters into, the transactions and investments it engages in, and how it protects itself. Much of the work is unique cases that span several jurisdictions at once, where there is no template to follow and the solution has to be built.</p>
       <div class="areas">
         <div>
           <h3>Organisational structure</h3>
@@ -186,6 +202,7 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
             <li>Reorganisations, including moving a group under a new parent company</li>
             <li>Ownership structures for companies and high-value assets</li>
             <li>Shareholder arrangements, share classes and governance</li>
+            <li>Incentive structures</li>
           </ul>
         </div>
         <div>
@@ -195,7 +212,7 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
             <li>Developing practical deal structures</li>
             <li>Shareholder, investment and joint venture agreements</li>
             <li>Distribution, agency and licensing agreements</li>
-            <li>Service, consultancy and framework agreements</li>
+            <li>Framework and partnership agreements</li>
             <li>Governing law, jurisdiction and dispute resolution</li>
           </ul>
         </div>
@@ -219,19 +236,19 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
   <div class="shell clause">
     <div class="mark">§ 2<span>Approach</span></div>
     <div>
-      <h2>Direct, commercial and clearly priced.</h2>
+      <h2>Direct and results oriented.</h2>
       <div class="ways">
         <div>
           <h3>One lawyer, directly</h3>
           <p>You deal with the lawyer doing the work, from the first call to the signed document. Nothing is handed down.</p>
         </div>
         <div>
-          <h3>Scope and fee up front</h3>
+          <h3>Clear scope and fee</h3>
           <p>Every matter starts with an agreed scope and an agreed fee basis, fixed where the work allows it. No surprises on the invoice.</p>
         </div>
         <div>
-          <h3>Advice you can act on</h3>
-          <p>Short documents, plain language, a recommendation rather than a list of options. Where local law needs a local lawyer, one is brought in and coordinated.</p>
+          <h3>Focus on legal solutions</h3>
+          <p>We believe a lawyer should be focused on results and on actually solving the client's problem, instead of offering hypothetical advice.</p>
         </div>
       </div>
     </div>
@@ -243,8 +260,30 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
     <div class="mark">§ 3<span>Contact</span></div>
     <div>
       <h2>Tell us what you are working on.</h2>
-      <p class="lede">A first conversation is free of charge and settles whether the practice is the right fit for the matter.</p>
-      <p class="note"><b>Contact details will be published here shortly.</b></p>
+      <p class="lede">A first conversation is free of charge and settles whether Poraj Law is the right fit for you.</p>
+      <form class="cform" id="cform" action="https://formsubmit.co/alexander@porajlaw.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Message from porajlaw.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <div class="f2">
+          <div class="f">
+            <label for="c-name">Your name</label>
+            <input id="c-name" name="name" type="text" required autocomplete="name" placeholder="Name">
+          </div>
+          <div class="f">
+            <label for="c-email">Your email</label>
+            <input id="c-email" name="email" type="email" required autocomplete="email" placeholder="name@company.com">
+          </div>
+        </div>
+        <div class="f">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" name="message" required rows="6" placeholder="What you are working on, and which countries are involved."></textarea>
+        </div>
+        <div class="f-actions">
+          <button type="submit" id="c-send">Send</button>
+          <p class="f-note" id="c-note" aria-live="polite"></p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -255,5 +294,28 @@ footer.site{background:var(--green-deep);color:var(--on-dark-faint);font-size:12
     <p>© 2026 Poraj Law. This website is a general presentation of the practice and does not constitute legal advice.</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var f=document.getElementById('cform'); if(!f) return;
+  var note=document.getElementById('c-note'), btn=document.getElementById('c-send');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name=f.name.value.trim(), email=f.email.value.trim(), msg=f.message.value.trim();
+    note.className='f-note';
+    if(name.length<2){ note.textContent='Please enter your name.'; note.className='f-note err'; f.name.focus(); return; }
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){ note.textContent='Please enter a valid email address.'; note.className='f-note err'; f.email.focus(); return; }
+    if(msg.length<10){ note.textContent='Please write a few more words.'; note.className='f-note err'; f.message.focus(); return; }
+    btn.disabled=true; note.textContent='Sending…';
+    var data={name:name, email:email, message:msg, _subject:'Message from porajlaw.com', _template:'table', _replyto:email};
+    fetch('https://formsubmit.co/ajax/alexander@porajlaw.com',{method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify(data)})
+    .then(function(r){ if(!r.ok) throw new Error('bad'); return r.json(); })
+    .then(function(){ note.textContent='Thank you. We will come back to you shortly.'; f.reset(); })
+    .catch(function(){ note.textContent='Sending failed. Please try again in a moment.'; note.className='f-note err'; })
+    .finally(function(){ btn.disabled=false; });
+  });
+})();
+</script>
 </body>
 </html>
